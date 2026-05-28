@@ -11,3 +11,4 @@ requests
 langchain-tavily
 beautifulsoup4
 fastapi[standard]
+langchain_anthropic

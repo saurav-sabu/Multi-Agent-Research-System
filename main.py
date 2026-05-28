@@ -1,6 +1,4 @@
-def main():
-    print("Hello from codespaces-blank!")
+from src.pipelines.pipeline import research_pipeline
 
-
-if __name__ == "__main__":
-    main()
+topic = "Impact of AI on Jobs"
+result = research_pipeline(topic)
