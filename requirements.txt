@@ -1,0 +1,13 @@
+langgraph
+langchain
+langchain-core
+langchain-community
+langchain-groq
+ipykernel
+python-dotenv
+streamlit
+tavily-python
+requests
+langchain-tavily
+beautifulsoup4
+fastapi[standard]
