@@ -9,7 +9,7 @@ from src.pipelines.pipeline import research_pipeline
 load_dotenv()
 
 app = FastAPI(
-    title="ScibeFlow API",
+    title="ScribeFlow API",
     description="Multi-agent automated research and content generation system using LangChain agents.",
     version="1.0.0"
 )
@@ -35,7 +35,7 @@ class ResearchResponse(BaseModel):
 @app.get("/")
 def read_root():
     """Health check / root endpoint."""
-    return {"status": "healthy", "service": "ScibeFlow API"}
+    return {"status": "healthy", "service": "ScribeFlow API"}
 
 @app.post("/api/research", response_model=ResearchResponse)
 def run_research(request: ResearchRequest):

@@ -63,7 +63,7 @@ function App() {
 
   // Load history from localStorage on mount
   useEffect(() => {
-    const saved = localStorage.getItem('scibeflow_history');
+    const saved = localStorage.getItem('scribeflow_history');
     if (saved) {
       try {
         setHistory(JSON.parse(saved));
@@ -77,12 +77,12 @@ function App() {
   const addToHistory = (newTopic) => {
     const updated = [newTopic, ...history.filter(t => t !== newTopic)].slice(0, 8);
     setHistory(updated);
-    localStorage.setItem('scibeflow_history', JSON.stringify(updated));
+    localStorage.setItem('scribeflow_history', JSON.stringify(updated));
   };
 
   const clearHistory = () => {
     setHistory([]);
-    localStorage.removeItem('scibeflow_history');
+    localStorage.removeItem('scribeflow_history');
   };
 
   // Stepper timeline loop
@@ -132,7 +132,7 @@ function App() {
       setCurrentStep(steps.length); // mark all done
     } catch (err) {
       console.error(err);
-      setError(err.message || 'An error occurred while connecting to the ScibeFlow API.');
+      setError(err.message || 'An error occurred while connecting to the ScribeFlow API.');
     } finally {
       setLoading(false);
       if (stepTimerRef.current) clearInterval(stepTimerRef.current);
@@ -298,7 +298,7 @@ function App() {
             <Sparkles size={24} />
           </div>
           <div>
-            <h1 className="brand-title">ScibeFlow</h1>
+            <h1 className="brand-title">ScribeFlow</h1>
             <p className="brand-subtitle">Multi-Agent AI Journalism</p>
           </div>
         </div>
@@ -342,7 +342,7 @@ function App() {
             All in <span>One Agentic Flow.</span>
           </h2>
           <p className="hero-description">
-            Provide a topic. ScibeFlow deploys cooperative autonomous agents to query, extract, write, and review complete articles with editorial oversight.
+            Provide a topic. ScribeFlow deploys cooperative autonomous agents to query, extract, write, and review complete articles with editorial oversight.
           </p>
 
           <form className="search-form" onSubmit={(e) => handleResearchSubmit(e)}>

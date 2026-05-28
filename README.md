@@ -1,12 +1,12 @@
-# 🖋️ ScibeFlow
+# 🖋️ ScribeFlow
 
-ScibeFlow is an automated, multi-agent AI research and content generation system. Powered by specialized LangChain agents and chains, ScibeFlow searches the web, extracts high-quality article materials, drafts engaging content, and conducts structured editorial reviews to ensure factual accuracy and clarity.
+ScribeFlow is an automated, multi-agent AI research and content generation system. Powered by specialized LangChain agents and chains, ScribeFlow searches the web, extracts high-quality article materials, drafts engaging content, and conducts structured editorial reviews to ensure factual accuracy and clarity.
 
 ---
 
 ## 🔄 Agentic Workflow
 
-ScibeFlow utilizes a four-step pipeline to transform a raw research topic into a polished, evaluated article:
+ScribeFlow utilizes a four-step pipeline to transform a raw research topic into a polished, evaluated article:
 
 ```mermaid
 graph TD
@@ -113,7 +113,7 @@ Make sure you have [uv](https://github.com/astral-sh/uv) or `pip` installed, alo
    npm install
    npm run dev
    ```
-   Open `http://localhost:5173` in your browser to experience the ScibeFlow visual workspace.
+   Open `http://localhost:5173` in your browser to experience the ScribeFlow visual workspace.
 
 ---
 
@@ -127,7 +127,7 @@ Once the API server is running, you can access the Swagger documentation at `htt
   ```json
   {
     "status": "healthy",
-    "service": "ScibeFlow API"
+    "service": "ScribeFlow API"
   }
   ```
 
