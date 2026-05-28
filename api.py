@@ -1,5 +1,6 @@
 import os
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from src.pipelines.pipeline import research_pipeline
@@ -8,9 +9,18 @@ from src.pipelines.pipeline import research_pipeline
 load_dotenv()
 
 app = FastAPI(
-    title="Multi-Agent Research System API",
-    description="API for running the multi-agent research pipeline using LangChain agents.",
+    title="ScibeFlow API",
+    description="Multi-agent automated research and content generation system using LangChain agents.",
     version="1.0.0"
+)
+
+# Enable CORS for local development
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 class ResearchRequest(BaseModel):
@@ -25,7 +35,7 @@ class ResearchResponse(BaseModel):
 @app.get("/")
 def read_root():
     """Health check / root endpoint."""
-    return {"status": "healthy", "service": "Multi-Agent Research System API"}
+    return {"status": "healthy", "service": "ScibeFlow API"}
 
 @app.post("/api/research", response_model=ResearchResponse)
 def run_research(request: ResearchRequest):
